@@ -40,7 +40,7 @@ class _DesainHalamanLoginState extends State<DesainHalamanLogin> {
                       child: Align(
                         alignment: Alignment.center,
                         child: Image(
-                           image: AssetImage('gambar/icon.jpg'),
+                           image: AssetImage('gambar/checkout.png'),
                             width: 100, // Sesuaikan ukuran gambar
                             height: 100,
                         ),
