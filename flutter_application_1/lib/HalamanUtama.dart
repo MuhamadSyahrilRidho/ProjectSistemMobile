@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/halamanlogin.dart';
 
 class DesainHalamanUtama extends StatefulWidget {
   const DesainHalamanUtama({Key? key}) : super(key: key);
@@ -16,7 +17,16 @@ class DesainHalamanUtamaState extends State<DesainHalamanUtama> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Halaman Utama'),
-        backgroundColor: Colors.black,
+        backgroundColor: Color.fromARGB(255, 148, 140, 251),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.logout),
+            onPressed: () {
+              // Handle kembali ke halaman login
+              _navigateToLogin();
+            },
+          ),
+        ],
       ),
       body: ListView.builder(
         itemCount: productList.length,
@@ -68,6 +78,16 @@ class DesainHalamanUtamaState extends State<DesainHalamanUtama> {
           ],
         );
       },
+    );
+  }
+
+  // Fungsi untuk menavigasi ke halaman login
+  void _navigateToLogin() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => DesainHalamanLogin(),
+      ),
     );
   }
 }
